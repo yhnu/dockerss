@@ -9,7 +9,7 @@ ENV SS_SERVER_ADDR=0.0.0.0 \
     SS_METHOD=aes-256-cfb \
     SS_TIMEOUT=300
 
-RUN apk add --update --no-cache --update-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/main/ --allow-untrusted libressl2.6-libcrypto libsodium \
+RUN apk add --update --no-cache --update-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/main/ --allow-untrusted libressl3.1-libcrypto libsodium \
     && apk add --no-cache --update-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing/ --allow-untrusted shadowsocks-libev
 
 EXPOSE ${SS_SERVER_PORT}/tcp ${SS_SERVER_PORT}/udp
